@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 MAINTAINER senggen <jackiecui@gmail.com>
 
-# ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ trusty main universe restricted multiverse" > /etc/apt/sources.list && \
 	echo "deb-src http://us.archive.ubuntu.com/ubuntu/ trusty main universe restricted multiverse" > /etc/apt/sources.list && \
