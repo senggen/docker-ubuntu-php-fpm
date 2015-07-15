@@ -11,7 +11,8 @@ RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ trusty main universe restrict
 
 RUN apt-get -y install php5 php5-fpm php5-gd php5-ldap \
     php5-sqlite php-pear php5-mysql \
-    php5-xmlrpc
+    php5-xmlrpc php5-common php5-cli \
+    libgd3 libxpm4 libldap-2.4-2 phpapi-20121212
 
 RUN sed -i '/daemonize /c \
 daemonize = no' /etc/php5/fpm/php-fpm.conf
