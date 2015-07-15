@@ -4,8 +4,11 @@ MAINTAINER senggen <jackiecui@gmail.com>
 # ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ trusty main universe restricted multiverse" > /etc/apt/sources.list && \
+	echo "deb-src http://us.archive.ubuntu.com/ubuntu/ trusty main universe restricted multiverse" > /etc/apt/sources.list && \
     echo "deb http://security.ubuntu.com/ubuntu trusty-security main universe restricted multiverse" > /etc/apt/sources.list && \
+    echo "deb-src http://security.ubuntu.com/ubuntu trusty-security main universe restricted multiverse" > /etc/apt/sources.list && \
     echo "deb http://us.archive.ubuntu.com/ubuntu/ trusty-updates main universe restricted multiverse" > /etc/apt/sources.list && \
+    echo "deb-src http://us.archive.ubuntu.com/ubuntu/ trusty-updates main universe restricted multiverse" > /etc/apt/sources.list && \
 	apt-get update && \
     apt-get -y dist-upgrade
 
